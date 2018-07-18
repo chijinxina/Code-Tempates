@@ -1,0 +1,10 @@
+%YAML:1.0
+---
+Camera-name: chijinxin
+Camera-x: 8.8888000000000005e+01
+Camera-y: 5.8588000000000001e+01
+testMat-data: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 1., 0., 0., 0., 1., 0., 0., 0., 1. ]
