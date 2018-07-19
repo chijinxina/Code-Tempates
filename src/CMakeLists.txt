@@ -78,5 +78,9 @@ target_link_libraries(mysql_connect_pool ${PROJECT_SOURCE_DIR}/lib64/libmysqlcpp
 add_executable(PriorityQueue C++优先级队列/PriorityQueue.cpp)
 
 
-##################实现简单的智能指针#############
+##################实现简单的智能指针############################
 add_executable(Smart_ptr 实现智能指针/smart_ptr.cpp)
+
+##################利用无锁队列和Future实现线程池#################
+add_executable(ThreadPool_folly 线程池原理/ThreadPool.cpp)
+target_link_libraries(ThreadPool_folly pthread folly)

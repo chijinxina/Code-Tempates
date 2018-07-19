@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 project(Code-Tempates)
 
 # 添加c++ 11标准支持
-set( CMAKE_CXX_FLAGS "-std=gnu++11" )
+set( CMAKE_CXX_FLAGS "-std=gnu++14" )
 
 # 添加cmake_modules
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
@@ -23,11 +23,13 @@ set(Boost_USE_MULTITHREADED ON) #开启boost多线程支持
 #find_package(Boost COMPONENTS system filesystem thread)
 #find_package(MathGL2 REQUIRED)  #MathGL2
 #find_package(freenect2 REQUIRED)
+#find_package(folly)
 
-
-message(Boost_version: ${Boost_VERSION})
-message(Boost_Lib: ${Boost_LIBRARIES})
-message(OpenCV: ${OpenCV_VERSION})
+#message(folly-include: ${FOLLY_INCLUDES})
+#message(folly-library: ${FOLLY_LIBRARIES})
+#message(Boost_version: ${Boost_VERSION})
+#message(Boost_Lib: ${Boost_LIBRARIES})
+#message(OpenCV: ${OpenCV_VERSION})
 #message(MathGL2:${MATHGL2_INCLUDE_DIRS})
 #message(MathGL2:${MATHGL2_LIBRARIES})
 #message(freenect2 include: ${freenect2_INCLUDE_DIR})
