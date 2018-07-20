@@ -82,5 +82,8 @@ add_executable(PriorityQueue C++优先级队列/PriorityQueue.cpp)
 add_executable(Smart_ptr 实现智能指针/smart_ptr.cpp)
 
 ##################利用无锁队列和Future实现线程池#################
-add_executable(ThreadPool_folly 线程池原理/ThreadPool.cpp)
-target_link_libraries(ThreadPool_folly pthread folly)
+add_executable(CPUThreadPool 线程池原理/ThreadPool.cpp)
+target_link_libraries(CPUThreadPool pthread)
+
+add_executable(CPUThreadPool_NoBlock 线程池原理/CPUThreadPool_NoBlock.cpp)
+target_link_libraries(CPUThreadPool_NoBlock ${FOLLY_LIBRARIES})

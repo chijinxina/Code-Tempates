@@ -17,6 +17,15 @@ set(Boost_USE_MULTITHREADED ON) #开启boost多线程支持
 
 
 ###################dependencies#######################
+find_package(folly CONFIG)
+if (NOT folly_FOUND)
+    # Look for folly using our FindFolly.cmake module.  This may work if the
+    # folly was built with its older autoconf build files rather than with CMake.
+    find_package(Folly MODULE REQUIRED)
+endif()
+
+message(folly-include: ${FOLLY_INCLUDE_DIR})
+message(folly-library: ${FOLLY_LIBRARIES})
 
 # 寻找OpenCV库
 #find_package( OpenCV 3.3.0 REQUIRED ) #OpenCV
@@ -38,6 +47,7 @@ set(Boost_USE_MULTITHREADED ON) #开启boost多线程支持
 
 # 添加头文件
 include_directories(
+        ${FOLLY_INCLUDE_DIR}
         ${BOOST_INCLUDE_DIR}
         #${OpenCV_INCLUDE_DIRS}
         #${MATHGL2_INCLUDE_DIRS}
