@@ -87,3 +87,7 @@ target_link_libraries(CPUThreadPool pthread)
 
 add_executable(CPUThreadPool_NoBlock 线程池原理/CPUThreadPool_NoBlock.cpp)
 target_link_libraries(CPUThreadPool_NoBlock ${FOLLY_LIBRARIES})
+
+
+##################实现tail功能############################
+add_executable(tail 实现tail的功能/tail.cpp)
