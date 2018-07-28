@@ -93,3 +93,5 @@ target_link_libraries(CPUThreadPool_NoBlock ${FOLLY_LIBRARIES})
 add_executable(tail 实现tail的功能/tail.cpp)
 
 add_executable(lower_bound lower_bound&upper_bound原理及应用/lower_bound.cpp)
+
+add_executable(Operator_new new的内部原理/Operator_new.cpp)

@@ -1,7 +1,8 @@
-#include<iostream>
-#include<cstdio>
-#include<cstring>
-#include<algorithm>
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+
 using namespace std;
 
 int k,n=10;
