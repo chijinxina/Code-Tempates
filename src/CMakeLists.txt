@@ -95,3 +95,6 @@ add_executable(tail 实现tail的功能/tail.cpp)
 add_executable(lower_bound lower_bound&upper_bound原理及应用/lower_bound.cpp)
 
 add_executable(Operator_new new的内部原理/Operator_new.cpp)
+
+add_executable(SephoneExample 两个线程交替打印奇偶数/SephoneExample.cpp)
+target_link_libraries(SephoneExample pthread)
