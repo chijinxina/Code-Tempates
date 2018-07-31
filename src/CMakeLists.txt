@@ -98,3 +98,6 @@ add_executable(Operator_new new的内部原理/Operator_new.cpp)
 
 add_executable(SephoneExample 两个线程交替打印奇偶数/SephoneExample.cpp)
 target_link_libraries(SephoneExample pthread)
+
+add_executable(CircularQueue_list 循环队列/CircularQueue_list.cpp)
+add_executable(CircularQueue_array 循环队列/CircularQueue_array.cpp)
