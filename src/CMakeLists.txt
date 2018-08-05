@@ -105,3 +105,4 @@ add_executable(CircularQueue_array 循环队列/CircularQueue_array.cpp)
 add_executable(Ucontext 协程_posix_ucontext用户级线程实现原理/Ucontext.cpp)
 
 add_executable(LRU 实现LRU/LRU.cpp)
+add_executable(Unique_ptr 实现unique_ptr/unique_ptr.cpp)
