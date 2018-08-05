@@ -60,7 +60,8 @@ public:
         }
         //2. 把元素放在链表首部
         list_.push_front(make_pair(key,value));
-        mp_.insert(make_pair(key,list_.begin()));
+        //mp_.insert(make_pair(key,list_.begin()));
+        mp_[key] = list_.begin();
     }
 
     int getSize()
