@@ -34,16 +34,16 @@ target_link_libraries(Thread_with_ref
 
 add_executable(iomapip_demo 小数格式控制符/mapip.cpp)
 
-add_executable(OpenCV_yaml_demo OpenCV操作yaml参数文件/opencv_yaml.cpp)
-target_link_libraries(OpenCV_yaml_demo
-        ${THIRD_PARTY_LIBS}
-        )
+#add_executable(OpenCV_yaml_demo OpenCV操作yaml参数文件/opencv_yaml.cpp)
+#target_link_libraries(OpenCV_yaml_demo
+#        ${THIRD_PARTY_LIBS}
+#        )
 
 
-add_executable(gnuplot 绘图/gnuplot.cpp) #failed!!!
+#add_executable(gnuplot 绘图/gnuplot.cpp) #failed!!!
 
-add_executable(matplotlib 绘图/matplotlibcpp.h 绘图/matplotlib_in_C++.cpp)
-target_link_libraries(matplotlib python2.7)
+#add_executable(matplotlib 绘图/matplotlibcpp.h 绘图/matplotlib_in_C++.cpp)
+#target_link_libraries(matplotlib python2.7)
 
 ###################C++ STL原理####################
 add_executable(iterator STL迭代器原理/itertor.cpp)
@@ -106,3 +106,5 @@ add_executable(Ucontext 协程_posix_ucontext用户级线程实现原理/Ucontex
 
 add_executable(LRU 实现LRU/LRU.cpp)
 add_executable(Unique_ptr 实现unique_ptr/unique_ptr.cpp)
+add_executable(Move_return move右值引用与返回值优化/Move_return.cpp)
+add_executable(Enable_shared_from_this enable_shared_from_this/Enable_shared_from_this.cpp)
