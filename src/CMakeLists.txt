@@ -76,7 +76,7 @@ add_executable(mysql_connect_pool C++数据库连接池/mysql_connect.cpp)
 target_link_libraries(mysql_connect_pool ${PROJECT_SOURCE_DIR}/lib64/libmysqlcppconn.so)
 
 add_executable(PriorityQueue C++优先级队列/PriorityQueue.cpp)
-
+add_executable(CPP11PriorityQueue C++优先级队列/CPP11Priority_Queue.cpp)
 
 ##################实现简单的智能指针############################
 add_executable(Smart_ptr 实现智能指针/smart_ptr.cpp)
