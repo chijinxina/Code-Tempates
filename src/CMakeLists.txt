@@ -110,3 +110,5 @@ add_executable(Move_return move右值引用与返回值优化/Move_return.cpp)
 add_executable(Enable_shared_from_this enable_shared_from_this/Enable_shared_from_this.cpp)
 add_executable(Static_Dynamic_cast static_cast&dynamic_cast/Static_Dynamic_cast.cpp)
 add_executable(memcpy_memmove memcpy_memmove/memcpy_memmove.cpp)
+
+add_executable(TrieExample 字典树及其应用/Trie.cpp)
