@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <thread>
+
 using namespace std;
 /*
  * 字符串分割函数
@@ -33,13 +35,8 @@ std::vector<std::string> split(std::string str, std::string pattern){
  * 测试demo
  */
 int main(){
-    string str ="10 11 123123\na b c\n";
-    cout<<str<<endl;
-    cout<<endl<<endl;
-    vector<string> res = split(str," ");
-    for(int i=0;i<res.size();i++)
-    {
-        cout<<res[i]<<endl;
-    }
+
+    vector<string> a = split("1,10;32,45",";");
+
     return 0;
 }
