@@ -112,3 +112,4 @@ add_executable(Static_Dynamic_cast static_cast&dynamic_cast/Static_Dynamic_cast.
 add_executable(memcpy_memmove memcpy_memmove/memcpy_memmove.cpp)
 
 add_executable(TrieExample 字典树及其应用/Trie.cpp)
+add_executable(LastRemaining 约瑟夫环/LastRemaining.cpp)
