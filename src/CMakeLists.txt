@@ -113,3 +113,4 @@ add_executable(memcpy_memmove memcpy_memmove/memcpy_memmove.cpp)
 
 add_executable(TrieExample 字典树及其应用/Trie.cpp)
 add_executable(LastRemaining 约瑟夫环/LastRemaining.cpp)
+add_executable(isNumeric 判断字符串是否表示数字/isNumeric.cpp)
