@@ -122,3 +122,4 @@ add_executable(shm_consumer 共享内存_生产者消费者模型/consumer_shm.c
 target_link_libraries(shm_consumer pthread)
 
 add_executable(nMerge 多路Merge/nMerge.cpp)
+add_executable(trait trait/trait.cpp)

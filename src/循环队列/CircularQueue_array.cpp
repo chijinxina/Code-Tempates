@@ -12,7 +12,7 @@ using namespace std;
 
 class CircleQueue{
 public:
-    CircleQueue(int size):size_(size),front_(0),end_(0)//,queue_(new int[size])
+    CircleQueue(int size):size_(size),read_(0),write_(0)//,queue_(new int[size])
     {
 
     }
@@ -20,28 +20,28 @@ public:
     bool isEmpty()
     {
         //判空 front == end
-       if( end_ == front_ ) return true;
+       if( write_ == read_ ) return true;
        else return false;
     }
 
     bool isFull()
     {
-        //判满 (end+1)%size == front
-        if( (end_ + 1)%size_ == front_ ) return true;
+        //判满 (write_+1)%size == read_
+        if( (write_ + 1)%size_ == read_ ) return true;
         else return false;
     }
 
     int length()
     {
-        return (end_ - front_ + size_ ) % size_;
+        return (write_ - read_ + size_ ) % size_;
     }
 
     void push_back(int v)
     {
         if(!isFull())
         {
-            queue_[end_] = v;
-            end_ = (++end_)%size_;
+            queue_[write_] = v;
+            write_ = (++write_)%size_;
         }
         else cout<<"isFull, can not push data!"<<endl;
     }
@@ -51,7 +51,7 @@ public:
         int result = 99999;
         if(!isEmpty())
         {
-            result = queue_[front_];
+            result = queue_[read_];
         }
         else cout<<"isEmpty, can not read top data!"<<endl;
         return result;
@@ -61,7 +61,7 @@ public:
     {
         if(!isEmpty())
         {
-            front_ = (++front_)%size_;
+            read_ = (++read_)%size_;
         }
         else cout<<"isEmpty, can not pop data!"<<endl;
     }
@@ -69,9 +69,8 @@ public:
 private:
     int queue_[10];
     int size_;
-
-    int front_;
-    int end_;
+    int read_;
+    int write_;
 };
 
 void TRUE(bool b)
