@@ -123,3 +123,5 @@ target_link_libraries(shm_consumer pthread)
 
 add_executable(nMerge 多路Merge/nMerge.cpp)
 add_executable(trait trait/trait.cpp)
+add_executable(binSearch_digui 二分查找递推写法/binSearch_digui.cpp)
+add_executable(pow_sqrt 二分查找递推写法/二分法pow&sqrt/pow_sqrt.cpp)

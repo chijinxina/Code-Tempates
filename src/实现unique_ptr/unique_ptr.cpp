@@ -13,7 +13,11 @@ class Unique_ptr {
 public:
     //构造函数
     explicit Unique_ptr(T *pp = nullptr): un_ptr(pp){}
-    ~Unique_ptr(){}
+    ~Unique_ptr()
+    {
+        delete (un_ptr);
+        un_ptr = nullptr; //避免空悬指针
+    }
 private:
     //托管的内存指针
     T* un_ptr;

@@ -28,7 +28,7 @@ public:
 
 private:
     int capacity_;  //容量
-    unordered_map<int,LIST_ITER> mp_;   //hashmap
+    unordered_map<int,LIST_ITER> mp_;       //hashmap
     list< pair<int, string> > list_;        //双向队列
 
 public:
