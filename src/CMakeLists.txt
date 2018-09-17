@@ -125,3 +125,10 @@ add_executable(nMerge 多路Merge/nMerge.cpp)
 add_executable(trait trait/trait.cpp)
 add_executable(binSearch_digui 二分查找递推写法/binSearch_digui.cpp)
 add_executable(pow_sqrt 二分查找递推写法/二分法pow&sqrt/pow_sqrt.cpp)
+add_executable(SignalSlot 信号槽_一对多回调线程安全/SignalSlot.cpp)
+add_executable(COW_with_Shared_ptr 利用shared_ptr实现copy_on_write/COW_with_Shared_ptr.cpp)
+
+add_executable(SimpleReactor SimpleReactor/SimpleReactor.cpp)
+target_link_libraries(SimpleReactor pthread)
+
+add_executable(SearchInSortMatrix 多路Merge/SearchInSortMatrix.cpp)
