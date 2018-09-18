@@ -8,6 +8,46 @@
 
 using namespace std;
 
+
+/*
+ * 链表快排
+ */
+struct Node{
+    int value;
+    Node *next;
+    Node(int v, Node* n):value(v),next(n){}
+};
+
+Node* GetPartition(Node* begin, Node* end)
+{
+    int value = begin->value;
+    Node* p = begin;
+    Node* q = p->next;
+
+    while(q != end)
+    {
+        if(q->value < value)
+        {
+            p = p->next;
+            swap(p->value, q->value);
+        }
+        q = q->next;
+    }
+    swap(p->value, begin->value);
+    return p;
+}
+
+void QSort_list(Node* begin, Node* end)
+{
+    if(begin != end)
+    {
+        Node* mid = GetPartition(begin, end);
+        QSort_list(begin, mid);
+        QSort_list(mid->next, end);
+    }
+}
+
+
 vector<int> data={6,1,2,7,9,3,4,5,10,8};
 int a[] = {6,1,2,7,9,3,4,5,10,8};
 
